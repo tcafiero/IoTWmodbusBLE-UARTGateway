@@ -2,7 +2,7 @@
 
 ## Modbus Functions
 
-### coilRead()
+## coilRead()
 
 #### Description
 
@@ -22,7 +22,7 @@ coilRead(int id, int address);
 #### Returns
 coil int value on success, -1 on failure.
 
-### discreteInputRead()
+## discreteInputRead()
 
 #### Description
 
@@ -42,7 +42,7 @@ discreteInputRead(int id, int address);
 #### Returns
 discrete input int value on success, -1 on failure.
 
-### holdingRegisterRead()
+## holdingRegisterRead()
 
 #### Description
 
@@ -62,7 +62,7 @@ holdingRegisterRead(int id, int address);
 #### Returns
 holding register long value on success, -1 on failure.
 
-### inputRegisterRead()
+## inputRegisterRead()
 
 #### Description
 
@@ -82,7 +82,7 @@ inputRegisterRead(int id, int address);
 #### Returns
 input register long value on success, -1 on failure.
 
-### coilWrite()
+## coilWrite()
 
 #### Description
 
@@ -103,7 +103,7 @@ coilWrite(int id, int address, uint8_t value);
 #### Returns
 return an int value: 1 on success; 0 on failure.
 
-### holdingRegisterWrite()
+## holdingRegisterWrite()
 
 #### Description
 
@@ -124,7 +124,7 @@ int holdingRegisterWrite(int id, int address, uint16_t value);
 #### Returns
 Return an int value: 1 on success; 0 on failure.
 
-### registerMaskWrite()
+## registerMaskWrite()
 
 #### Description
 
