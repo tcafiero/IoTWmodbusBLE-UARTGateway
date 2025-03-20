@@ -2,7 +2,7 @@
 
 ## Modbus Functions
 
-## coilRead()
+## coilRead
 
 #### Description
 
@@ -11,7 +11,7 @@ Perform a "Read Coils" operation for the specified address for a single coil.
 #### Syntax
 
 ``
-coilRead(int id, int address);
+coilRead id address
 ``
 
 #### Parameters
@@ -22,7 +22,7 @@ coilRead(int id, int address);
 #### Returns
 coil int value on success, -1 on failure.
 
-## discreteInputRead()
+## discreteInputRead
 
 #### Description
 
@@ -31,7 +31,7 @@ Perform a "Read Discrete Inputs" operation for the specified address for a singl
 #### Syntax
 
 ``
-discreteInputRead(int id, int address);
+discreteInputRead id address
 ``
 
 #### Parameters
@@ -42,7 +42,7 @@ discreteInputRead(int id, int address);
 #### Returns
 discrete input int value on success, -1 on failure.
 
-## holdingRegisterRead()
+## holdingRegisterRead
 
 #### Description
 
@@ -51,7 +51,7 @@ Perform a "Read Holding Registers" operation for a single holding register.
 #### Syntax
 
 ``
-holdingRegisterRead(int id, int address);
+holdingRegisterRead id address
 ``
 
 #### Parameters
@@ -62,7 +62,7 @@ holdingRegisterRead(int id, int address);
 #### Returns
 holding register long value on success, -1 on failure.
 
-## inputRegisterRead()
+## inputRegisterRead
 
 #### Description
 
@@ -71,7 +71,7 @@ Perform a "Read Input Registers" operation for a single input register.
 #### Syntax
 
 ``
-inputRegisterRead(int id, int address);
+inputRegisterRead id address
 ``
 
 #### Parameters
@@ -82,7 +82,7 @@ inputRegisterRead(int id, int address);
 #### Returns
 input register long value on success, -1 on failure.
 
-## coilWrite()
+## coilWrite
 
 #### Description
 
@@ -91,7 +91,7 @@ Perform a "Write Single Coil" operation for the specified address and value.
 #### Syntax
 
 ``
-coilWrite(int id, int address, uint8_t value);
+coilWrite id address value
 ``
 
 #### Parameters
@@ -103,7 +103,7 @@ coilWrite(int id, int address, uint8_t value);
 #### Returns
 return an int value: 1 on success; 0 on failure.
 
-## holdingRegisterWrite()
+## holdingRegisterWrite
 
 #### Description
 
@@ -112,7 +112,7 @@ Perform a "Write Single Holding Register" operation for the specified address an
 #### Syntax
 
 ``
-int holdingRegisterWrite(int id, int address, uint16_t value);
+int holdingRegisterWrite id address value
 ``
 
 #### Parameters
@@ -124,7 +124,7 @@ int holdingRegisterWrite(int id, int address, uint16_t value);
 #### Returns
 Return an int value: 1 on success; 0 on failure.
 
-## registerMaskWrite()
+## registerMaskWrite
 
 #### Description
 
@@ -133,7 +133,7 @@ Perform a "Mask Write Registers" operation for the specified address, AND mask a
 #### Syntax
 
 ``
-registerMaskWrite(int id, int address, uint16_t andMask, uint16_t orMask);
+registerMaskWrite id address andMask orMask
 ``
 
 #### Parameters
