@@ -78,7 +78,7 @@ void test_wrapper(int argc, char **argv)
 {
   int a;
   char b[20];
-  const char testmessage[] = "le donne i cavalier l'arme gli amori\n";
+  const char testmessage[] = "le donne i cavalier l'arme gli amori\n\r";
   argvscanf("%d %s", &a, b);
   Serial.printf("Hello World!\n");
   Serial.printf("a=%d b=%s\n\n", a, b);
@@ -91,20 +91,20 @@ void test_wrapper(int argc, char **argv)
 
 void getVoltage_wrapper(int argc, char **argv)
 {
-  snprintf(retValue, sizeof(retValue), "%.0f", (float) ((int16_t)ModbusRTUClient.inputRegisterRead(PH_SLAVE_ADDRESS, 2)) );
-  shell.ble.print(retValue);
+  //snprintf(retValue, sizeof(retValue), "%.0f", (float) ((int16_t)ModbusRTUClient.inputRegisterRead(PH_SLAVE_ADDRESS, 2)) );
+  shell.ble.print(ModbusRTUClient.inputRegisterRead(PH_SLAVE_ADDRESS, 2));
 }
 
 void isStable_wrapper(int argc, char **argv)
 {
-  snprintf(retValue, sizeof(retValue), "%d", 1);
-  shell.ble.print(retValue);
+  //snprintf(retValue, sizeof(retValue), "%d", 1);
+  shell.ble.print(1);
 }
 
 void getpH_wrapper(int argc, char **argv)
 {
-  snprintf(retValue, sizeof(retValue), "%.2f",  ModbusRTUClient.inputRegisterRead(PH_SLAVE_ADDRESS, 1) / 100.0);
-  shell.ble.print(retValue);
+  //snprintf(retValue, sizeof(retValue), "%.2f",  ModbusRTUClient.inputRegisterRead(PH_SLAVE_ADDRESS, 1) / 100.0);
+  shell.ble.print(ModbusRTUClient.inputRegisterRead(PH_SLAVE_ADDRESS, 1) / 100.0);
 }
 
 void setP0_wrapper(int argc, char **argv)
